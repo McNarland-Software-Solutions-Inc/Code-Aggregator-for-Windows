@@ -1,0 +1,17 @@
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.exe
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.deps.json
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.runtimeconfig.json
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.dll
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.pdb
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Form1.resources
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\ProgressForm.resources
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.csproj.GenerateResource.cache
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.GeneratedMSBuildEditorConfig.editorconfig
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.AssemblyInfoInputs.cache
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.AssemblyInfo.cs
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.csproj.CoreCompileInputs.cache
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.dll
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\refint\Code Aggregator.dll
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.pdb
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.genruntimeconfig.cache
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\ref\Code Aggregator.dll
