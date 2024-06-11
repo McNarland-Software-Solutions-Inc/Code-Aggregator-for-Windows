@@ -10,15 +10,26 @@ public class FileAggregator
     public static void AggregateFiles(string rootFolder, IEnumerable<string> includedFiles, string outputPath)
     {
         var sb = new StringBuilder();
+        sb.AppendLine($"Source folder: {rootFolder}");
+
         foreach (var file in includedFiles)
         {
-            if (IsTextFile(file))
+            bool isTextFile = IsTextFile(file);
+            Logger.Log($"File: {file}, IsTextFile: {isTextFile}");
+
+            if (isTextFile)
             {
                 var content = File.ReadAllText(file);
-                sb.AppendLine($"Folder: {Path.GetDirectoryName(file)}");
-                sb.AppendLine($"Filename: {Path.GetFileName(file)}");
+                var relativePath = Path.GetRelativePath(rootFolder, file);
+                var folder = Path.GetDirectoryName(relativePath);
+                var fileName = Path.GetFileName(file);
+
+                sb.AppendLine($"Folder: {folder}");
+                sb.AppendLine($"Filename: {fileName}");
                 sb.AppendLine(content);
                 sb.AppendLine();
+
+                Logger.Log($"First 20 characters of {file}: {content.Substring(0, Math.Min(20, content.Length))}");
             }
         }
         File.WriteAllText(outputPath, sb.ToString());
@@ -26,13 +37,28 @@ public class FileAggregator
 
     private static bool IsTextFile(string filePath)
     {
-        const int sampleSize = 1024;
-        var buffer = new byte[sampleSize];
-        using (var stream = File.OpenRead(filePath))
+        try
         {
-            stream.Read(buffer, 0, sampleSize);
-        }
+            using (var stream = new StreamReader(filePath, detectEncodingFromByteOrderMarks: true))
+            {
+                char[] buffer = new char[512];
+                int charsRead = stream.Read(buffer, 0, buffer.Length);
+                if (charsRead == 0)
+                    return false;
 
-        return buffer.All(b => b == 0 || b > 31 && b < 127);
+                for (int i = 0; i < charsRead; i++)
+                {
+                    if (char.IsControl(buffer[i]) && buffer[i] != '\r' && buffer[i] != '\n' && buffer[i] != '\t')
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        catch
+        {
+            return false;
+        }
     }
 }

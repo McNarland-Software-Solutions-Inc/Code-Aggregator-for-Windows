@@ -9,22 +9,6 @@ public static class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-
-        var folderPath = FolderSelector.SelectFolder();
-        if (!string.IsNullOrEmpty(folderPath))
-        {
-            var settingsManager = new SettingsManager(folderPath);
-            var includedFiles = settingsManager.LoadSettings();
-
-            using (var form = new FolderTreeView(folderPath))
-            {
-                form.FormClosing += (sender, args) =>
-                {
-                    settingsManager.SaveSettings(form.GetIncludedFiles());
-                };
-
-                Application.Run(form);
-            }
-        }
+        Application.Run(new Form1());
     }
 }

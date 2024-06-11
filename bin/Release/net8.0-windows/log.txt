@@ -1,0 +1,32 @@
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom-tinymce-style.css
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom.css
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\scripts\server_setup.py
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\requirements.txt
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\resolve_conflicts.bat
+2024-06-11 1:04:11 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\settings.json
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom-tinymce-style.css, IsTextFile: False
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom.css, IsTextFile: False
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\scripts\server_setup.py, IsTextFile: False
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\requirements.txt, IsTextFile: False
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\resolve_conflicts.bat, IsTextFile: False
+2024-06-11 1:04:11 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\settings.json, IsTextFile: False
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom-tinymce-style.css
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom.css
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\scripts\server_setup.py
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\requirements.txt
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\resolve_conflicts.bat
+2024-06-11 1:07:08 PM: Selected file: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\settings.json
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom-tinymce-style.css, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom-tinymce-style.css: /* Base Typography a
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom.css, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\css\custom.css: /* Base Typography &
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\scripts\server_setup.py, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\scripts\server_setup.py: def update_model_pat
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\requirements.txt, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\requirements.txt: Flask==2.0.2
+Flask-
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\resolve_conflicts.bat, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\resolve_conflicts.bat: @echo on
+SETLOCAL E
+2024-06-11 1:07:08 PM: File: K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\settings.json, IsTextFile: True
+2024-06-11 1:07:08 PM: First 20 characters of K:\OneDrive\Documents\06-Coding\Repositories\InterActiveAdventureGame\settings.json: K:\OneDrive\Document

@@ -3,23 +3,39 @@
   "WorkspaceRootPath": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\fileaggregator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\fileaggregator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:fileaggregator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\progressform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:progressform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\progressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:progressform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:settingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\folderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\folderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:folderselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,8 +46,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T17:19:46.142Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Logger.cs",
+              "RelativeDocumentMoniker": "Logger.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Logger.cs",
+              "RelativeToolTip": "Logger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T19:56:52.628Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -46,16 +89,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAYwCkAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "ProgressForm.Designer.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\ProgressForm.Designer.cs",
+              "RelativeDocumentMoniker": "ProgressForm.Designer.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\ProgressForm.Designer.cs",
+              "RelativeToolTip": "ProgressForm.Designer.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAuwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:19:46.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T19:02:54.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProgressForm.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\ProgressForm.cs",
+              "RelativeDocumentMoniker": "ProgressForm.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\ProgressForm.cs",
+              "RelativeToolTip": "ProgressForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T19:02:34.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T18:26:19.169Z"
             },
             {
               "$type": "Document",
@@ -65,14 +131,14 @@
               "RelativeDocumentMoniker": "FileAggregator.cs",
               "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FileAggregator.cs",
               "RelativeToolTip": "FileAggregator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwDYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T17:12:07.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SettingsManager.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SettingsManager.cs",
               "RelativeDocumentMoniker": "SettingsManager.cs",
@@ -80,25 +146,24 @@
               "RelativeToolTip": "SettingsManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:11:45.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T17:11:45.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FolderTreeView.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
               "RelativeDocumentMoniker": "FolderTreeView.cs",
               "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
               "RelativeToolTip": "FolderTreeView.cs",
-              "ViewState": "AQIAAFYAAACAyMzMzMwWwH0AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAMwA4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T17:11:14.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FolderSelector.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelector.cs",
               "RelativeDocumentMoniker": "FolderSelector.cs",
@@ -106,8 +171,7 @@
               "RelativeToolTip": "FolderSelector.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:10:46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T17:10:46Z"
             }
           ]
         }
