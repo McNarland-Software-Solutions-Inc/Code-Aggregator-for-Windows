@@ -1,4 +1,4 @@
-﻿// Filename: FolderTreeView.cs
+// Filename: FolderTreeView.cs
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,10 +31,11 @@ public class FolderTreeView : Form
         Controls.Add(startButton);
 
         // Layout
-        folderTreeView.Dock = DockStyle.Top;
+        folderTreeView.Dock = DockStyle.Fill;
         checkAllButton.Dock = DockStyle.Bottom;
         uncheckAllButton.Dock = DockStyle.Bottom;
         startButton.Dock = DockStyle.Bottom;
+        this.SizeChanged += FolderTreeView_SizeChanged;
     }
 
     private void LoadFolders(string path)
@@ -104,24 +105,3 @@ public class FolderTreeView : Form
         return includedFiles;
     }
 
-    private void GetIncludedFilesRecursive(TreeNodeCollection nodes, List<string> includedFiles)
-    {
-        foreach (TreeNode node in nodes)
-        {
-            if (node.Checked && File.Exists((string)node.Tag))
-            {
-                includedFiles.Add((string)node.Tag);
-            }
-            GetIncludedFilesRecursive(node.Nodes, includedFiles);
-        }
-    }
-
-    private void SetNodeCheckState(TreeNodeCollection nodes, bool checkState)
-    {
-        foreach (TreeNode node in nodes)
-        {
-            node.Checked = checkState;
-            SetNodeCheckState(node.Nodes, checkState);
-        }
-    }
-}
