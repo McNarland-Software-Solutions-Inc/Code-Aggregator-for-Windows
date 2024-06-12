@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9G7eWIx9APJAETrmoX7A/XzoO424PoL+zvU9X+7OUU/NjIKfFL3n5JUUN+8BZIwWW464L1ey2Pbfjak8VRyo5w==",
+  "dgSpecHash": "DHO5oKDGGySMECEodHWeocB+TT+dXg047cN+Tt7EfZ/c4Y54ujDDHrRzrhCjXZSr62eYAn1EGhoZgVgyWuFiug==",
   "success": true,
   "projectFilePath": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Code Aggregator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\rober\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

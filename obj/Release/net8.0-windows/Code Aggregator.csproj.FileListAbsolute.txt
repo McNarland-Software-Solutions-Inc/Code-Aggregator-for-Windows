@@ -3,6 +3,8 @@ K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.runtimeconfig.json
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.dll
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Code Aggregator.pdb
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\bin\Release\net8.0-windows\Newtonsoft.Json.dll
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.csproj.AssemblyReference.cache
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Form1.resources
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\ProgressForm.resources
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.csproj.GenerateResource.cache
@@ -11,6 +13,7 @@ K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.AssemblyInfo.cs
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.csproj.CoreCompileInputs.cache
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.sourcelink.json
+K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Agg.8582242D.Up2Date
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.dll
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\refint\Code Aggregator.dll
 K:\OneDrive\Documents\06-Coding\Repositories\Code Aggregator\obj\Release\net8.0-windows\Code Aggregator.pdb

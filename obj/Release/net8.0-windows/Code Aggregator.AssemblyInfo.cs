@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Code Aggregator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+735b6f64e18e7252ab04fc98d5d2e6c12324ac45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a50c959728accab6fcfc7664c2ad30ac06f979dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Code Aggregator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Code Aggregator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

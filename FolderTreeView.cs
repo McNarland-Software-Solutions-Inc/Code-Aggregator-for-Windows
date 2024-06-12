@@ -1,9 +1,9 @@
 // Filename: FolderTreeView.cs
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 public class FolderTreeView : Form
@@ -12,9 +12,14 @@ public class FolderTreeView : Form
     private Button checkAllButton;
     private Button uncheckAllButton;
     private Button startButton;
-    private string? lastSaveLocation;
+    private string rootFolder;
+    private FolderSelection folderSelection;
+
     public FolderTreeView(string rootFolder)
     {
+        this.rootFolder = rootFolder;
+        folderSelection = SelectionManager.GetFolderSelection(rootFolder);
+
         folderTreeView = new TreeView
         {
             CheckBoxes = true // Enable checkboxes
@@ -42,6 +47,8 @@ public class FolderTreeView : Form
         this.SizeChanged += FolderTreeView_SizeChanged;
 
         this.Height = 600; // Adjust the initial height
+
+        CheckForNewFolders();
     }
 
     private void LoadFolders(string path)
@@ -57,14 +64,24 @@ public class FolderTreeView : Form
         var path = (string)node.Tag;
         foreach (var directory in Directory.GetDirectories(path))
         {
-            var subNode = new TreeNode(Path.GetFileName(directory)) { Tag = directory };
+            var relativePath = Path.GetRelativePath(rootFolder, directory);
+            var subNode = new TreeNode(Path.GetFileName(directory))
+            {
+                Tag = directory,
+                Checked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
+            };
             node.Nodes.Add(subNode);
             LoadSubFolders(subNode);
         }
 
         foreach (var file in Directory.GetFiles(path))
         {
-            var fileNode = new TreeNode(Path.GetFileName(file)) { Tag = file };
+            var relativePath = Path.GetRelativePath(rootFolder, file);
+            var fileNode = new TreeNode(Path.GetFileName(file))
+            {
+                Tag = file,
+                Checked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
+            };
             node.Nodes.Add(fileNode);
         }
     }
@@ -105,6 +122,7 @@ public class FolderTreeView : Form
 
     private void StartButton_Click(object? sender, EventArgs e)
     {
+        SaveFolderSelections();
         StartOperationAsync();
     }
 
@@ -114,15 +132,16 @@ public class FolderTreeView : Form
         {
             Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
             DefaultExt = "txt",
-            InitialDirectory = lastSaveLocation // Use the last save location
+            InitialDirectory = SelectionManager.LoadSelections().Folders
+                .FirstOrDefault(f => f.SourceFolder == rootFolder)?.OutputFile // Use the saved output file path
         };
 
         if (saveFileDialog.ShowDialog() == DialogResult.OK)
         {
-            lastSaveLocation = Path.GetDirectoryName(saveFileDialog.FileName); // Remember the save location
+            folderSelection.OutputFile = saveFileDialog.FileName; // Update the output file path
+            SelectionManager.UpdateFolderSelection(folderSelection);
 
             var includedFiles = GetIncludedFiles();
-            LogSelectedFiles(includedFiles);
             using (var progressForm = new ProgressForm())
             {
                 progressForm.Show();
@@ -140,7 +159,7 @@ public class FolderTreeView : Form
                         int progress = (int)((double)processedFiles / totalFiles * 100);
                         progressForm.Invoke(new Action(() => progressForm.SetProgress(progress)));
                     }
-                    FileAggregator.AggregateFiles((string)folderTreeView.Nodes[0].Tag, includedFiles, saveFileDialog.FileName);
+                    FileAggregator.AggregateFiles(rootFolder, includedFiles, saveFileDialog.FileName);
                 });
                 progressForm.Close();
             }
@@ -167,14 +186,6 @@ public class FolderTreeView : Form
         }
     }
 
-    private void LogSelectedFiles(IEnumerable<string> files)
-    {
-        foreach (var file in files)
-        {
-            Logger.Log($"Selected file: {file}");
-        }
-    }
-
     public IEnumerable<string> GetIncludedFiles()
     {
         var includedFiles = new List<string>();
@@ -191,6 +202,46 @@ public class FolderTreeView : Form
                 includedFiles.Add((string)node.Tag);
             }
             GetIncludedFilesRecursive(node.Nodes, includedFiles);
+        }
+    }
+
+    private void CheckForNewFolders()
+    {
+        CheckForNewFoldersRecursive(folderTreeView.Nodes);
+    }
+
+    private void CheckForNewFoldersRecursive(TreeNodeCollection nodes)
+    {
+        foreach (TreeNode node in nodes)
+        {
+            var relativePath = Path.GetRelativePath(rootFolder, (string)node.Tag);
+            if (!folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath))
+            {
+                node.ForeColor = Color.Green; // Indicate new folders
+                node.Expand(); // Expand to show new folders
+            }
+            CheckForNewFoldersRecursive(node.Nodes);
+        }
+    }
+
+    private void SaveFolderSelections()
+    {
+        folderSelection.SelectedFolders.Clear();
+        SaveFolderSelectionsRecursive(folderTreeView.Nodes);
+        SelectionManager.UpdateFolderSelection(folderSelection);
+    }
+
+    private void SaveFolderSelectionsRecursive(TreeNodeCollection nodes)
+    {
+        foreach (TreeNode node in nodes)
+        {
+            var relativePath = Path.GetRelativePath(rootFolder, (string)node.Tag);
+            folderSelection.SelectedFolders.Add(new FolderStatus
+            {
+                FolderPath = relativePath,
+                Included = node.Checked
+            });
+            SaveFolderSelectionsRecursive(node.Nodes);
         }
     }
 
