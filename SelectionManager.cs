@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 public static class SelectionManager
 {
-    private static readonly string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "selections.json");
+    private static readonly string jsonFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "CodeAggregator", "selections.json");
 
     public static RootSelection LoadSelections()
     {
@@ -20,6 +20,12 @@ public static class SelectionManager
 
     public static void SaveSelections(RootSelection rootSelection)
     {
+        var directory = Path.GetDirectoryName(jsonFilePath);
+        if (directory != null && !Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
         var json = Newtonsoft.Json.JsonConvert.SerializeObject(rootSelection, Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(jsonFilePath, json);
     }

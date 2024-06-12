@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\folderselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:folderselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:foldertreeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -34,73 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SelectionManager.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SelectionManager.cs",
-              "RelativeDocumentMoniker": "SelectionManager.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SelectionManager.cs",
-              "RelativeToolTip": "SelectionManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:02:27.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FolderTreeView.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
-              "RelativeDocumentMoniker": "FolderTreeView.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
-              "RelativeToolTip": "FolderTreeView.cs",
-              "ViewState": "AQIAAKMAAAAA8P////8XwMIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:01:39.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAjwHMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:19:46.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAIIAAAAAAAAAAAAAwK0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T16:44:13.98Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FolderSelection.cs",
-              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelection.cs",
-              "RelativeDocumentMoniker": "FolderSelection.cs",
-              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelection.cs",
-              "RelativeToolTip": "FolderSelection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T16:41:45.623Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -115,6 +50,68 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SelectionManager.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SelectionManager.cs",
+              "RelativeDocumentMoniker": "SelectionManager.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SelectionManager.cs",
+              "RelativeToolTip": "SelectionManager.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T17:02:27.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FolderTreeView.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
+              "RelativeDocumentMoniker": "FolderTreeView.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
+              "RelativeToolTip": "FolderTreeView.cs",
+              "ViewState": "AQIAAKMAAAAA8P////8XwMIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T17:01:39.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAjwHMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T17:19:46.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAAwK0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T16:44:13.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FolderSelection.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelection.cs",
+              "RelativeDocumentMoniker": "FolderSelection.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelection.cs",
+              "RelativeToolTip": "FolderSelection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T16:41:45.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "FolderSelector.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelector.cs",
@@ -123,8 +120,7 @@
               "RelativeToolTip": "FolderSelector.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T17:10:46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T17:10:46Z"
             }
           ]
         }
