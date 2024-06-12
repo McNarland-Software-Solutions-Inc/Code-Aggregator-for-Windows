@@ -76,7 +76,7 @@ Code Aggregator is an application that allows you to select a root folder and ag
 
 3. After installation, you can find the application in the Start Menu under "Code Aggregator."
 
-## Version 1.0.0 - Initial Release
+## Version 1.0.1 - Initial Release with patch
 
 ### Overview
 
