@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:selectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|k:\\onedrive\\documents\\06-coding\\repositories\\code aggregator\\folderselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\folderselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80F65E84-AD34-4D43-AA6B-ADAFB43E7956}|Code Aggregator.csproj|solutionrelative:folderselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -51,6 +55,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T17:12:27.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SelectionManager.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\SelectionManager.cs",
               "RelativeDocumentMoniker": "SelectionManager.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FolderTreeView.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderTreeView.cs",
               "RelativeDocumentMoniker": "FolderTreeView.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FolderSelection.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelection.cs",
               "RelativeDocumentMoniker": "FolderSelection.cs",
@@ -107,12 +124,11 @@
               "RelativeToolTip": "FolderSelection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T16:41:45.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T16:41:45.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FolderSelector.cs",
               "DocumentMoniker": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\FolderSelector.cs",
               "RelativeDocumentMoniker": "FolderSelector.cs",

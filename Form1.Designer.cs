@@ -31,6 +31,7 @@ partial class Form1
         this.ClientSize = new System.Drawing.Size(600, 400);
         this.Name = "Form1";
         this.Text = "Code Aggregator";
+        this.Icon = new Icon("K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\favicon.ico");
         this.ResumeLayout(false);
     }
     #endregion
