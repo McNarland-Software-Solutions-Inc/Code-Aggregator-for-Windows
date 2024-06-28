@@ -5,6 +5,8 @@
         Width="800" Height="600">
     <StackPanel>
         <TextBlock Text="Welcome to Code Aggregator" Margin="10"/>
-        <!-- Add more UI components here -->
+        <Button Name="SelectFolderButton" Content="Select Folder" HorizontalAlignment="Center" Click="SelectFolderButton_Click"/>
+        <TreeView Name="FolderTreeView" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBox Name="OutputTextBox" Margin="10" Height="100" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
     </StackPanel>
 </Window>

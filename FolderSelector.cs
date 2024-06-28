@@ -1,18 +1,11 @@
-﻿// Filename: FolderSelector.cs
-using System;
-using System.Windows.Forms;
+﻿using System;
+using Avalonia.Controls;
 
 public class FolderSelector
 {
-    public static string SelectFolder()
+    public static async Task<string> SelectFolder(Window parent)
     {
-        using (var folderDialog = new FolderBrowserDialog())
-        {
-            if (folderDialog.ShowDialog() == DialogResult.OK)
-            {
-                return folderDialog.SelectedPath;
-            }
-        }
-        return string.Empty;
+        var dialog = new OpenFolderDialog();
+        return await dialog.ShowAsync(parent) ?? string.Empty;
     }
 }

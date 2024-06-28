@@ -1,4 +1,3 @@
-// Filename: Form1.Designer.cs
 partial class Form1
 {
     /// <summary>
@@ -10,14 +9,15 @@ partial class Form1
     /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
-    {
-        if (disposing && (components != null))
-        {
-            components.Dispose();
-        }
-        base.Dispose(disposing);
-    }
+    // Remove this override
+    // protected override void Dispose(bool disposing)
+    // {
+    //     if (disposing && (components != null))
+    //     {
+    //         components.Dispose();
+    //     }
+    //     base.Dispose(disposing);
+    // }
 
     #region Windows Form Designer generated code
 

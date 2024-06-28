@@ -1,0 +1,11 @@
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.csproj.AssemblyReference.cache
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/Form1.resources
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/ProgressForm.resources
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.csproj.GenerateResource.cache
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.GeneratedMSBuildEditorConfig.editorconfig
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.AssemblyInfoInputs.cache
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.AssemblyInfo.cs
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.csproj.CoreCompileInputs.cache
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/code-aggregator.sourcelink.json
+/home/robert-mcnarland/repositories/code-aggregator/obj/Debug/net8.0/MainWindow.resources

@@ -1,12 +1,11 @@
-// Filename: FolderTreeView.cs
-using System;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Windows.Forms;
+using System.Threading.Tasks;
 
-public class FolderTreeView : Form
+public class FolderTreeView : Window
 {
     private TreeView folderTreeView;
     private Button checkAllButton;
@@ -20,159 +19,139 @@ public class FolderTreeView : Form
         this.rootFolder = rootFolder;
         folderSelection = SelectionManager.GetFolderSelection(rootFolder);
 
-        folderTreeView = new TreeView
-        {
-            CheckBoxes = true // Enable checkboxes
-        };
-        folderTreeView.AfterCheck += FolderTreeView_AfterCheck; // Event handler for AfterCheck
-        checkAllButton = new Button { Text = "Check All" };
-        uncheckAllButton = new Button { Text = "Uncheck All" };
-        startButton = new Button { Text = "Start Operation" };
+        folderTreeView = new TreeView();
+        checkAllButton = new Button { Content = "Check All" };
+        uncheckAllButton = new Button { Content = "Uncheck All" };
+        startButton = new Button { Content = "Start Operation" };
 
         checkAllButton.Click += CheckAllButton_Click;
         uncheckAllButton.Click += UncheckAllButton_Click;
         startButton.Click += StartButton_Click;
 
         LoadFolders(rootFolder);
-        Controls.Add(folderTreeView);
-        Controls.Add(checkAllButton);
-        Controls.Add(uncheckAllButton);
-        Controls.Add(startButton);
 
-        // Layout
-        folderTreeView.Dock = DockStyle.Fill;
-        checkAllButton.Dock = DockStyle.Bottom;
-        uncheckAllButton.Dock = DockStyle.Bottom;
-        startButton.Dock = DockStyle.Bottom;
-        this.SizeChanged += FolderTreeView_SizeChanged;
+        var stackPanel = new StackPanel();
+        stackPanel.Children.Add(checkAllButton);
+        stackPanel.Children.Add(uncheckAllButton);
+        stackPanel.Children.Add(startButton);
+        stackPanel.Children.Add(folderTreeView);
 
-        this.Height = 600; // Adjust the initial height
+        this.Content = stackPanel;
 
-        CheckForNewFolders();
+        this.Height = 600;
     }
 
     private void LoadFolders(string path)
     {
-        var rootNode = new TreeNode(path) { Tag = path };
-        folderTreeView.Nodes.Add(rootNode);
+        var rootNode = new TreeViewItem { Header = path, Tag = path };
+        folderTreeView.Items = new List<TreeViewItem> { rootNode };
         LoadSubFolders(rootNode);
-        rootNode.Expand(); // Expand the selected folder
+        rootNode.IsExpanded = true;
     }
 
-    private void LoadSubFolders(TreeNode node)
+    private void LoadSubFolders(TreeViewItem node)
     {
         var path = (string)node.Tag;
         foreach (var directory in Directory.GetDirectories(path))
         {
             var relativePath = Path.GetRelativePath(rootFolder, directory);
-            var subNode = new TreeNode(Path.GetFileName(directory))
+            var subNode = new TreeViewItem
             {
+                Header = Path.GetFileName(directory),
                 Tag = directory,
-                Checked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
+                IsChecked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
             };
-            node.Nodes.Add(subNode);
+            node.Items.Add(subNode);
             LoadSubFolders(subNode);
         }
 
         foreach (var file in Directory.GetFiles(path))
         {
             var relativePath = Path.GetRelativePath(rootFolder, file);
-            var fileNode = new TreeNode(Path.GetFileName(file))
+            var fileNode = new TreeViewItem
             {
+                Header = Path.GetFileName(file),
                 Tag = file,
-                Checked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
+                IsChecked = folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath && f.Included)
             };
-            node.Nodes.Add(fileNode);
+            node.Items.Add(fileNode);
         }
     }
 
-    private void FolderTreeView_AfterCheck(object? sender, TreeViewEventArgs e)
+    private void CheckAllButton_Click(object sender, RoutedEventArgs e)
     {
-        if (e.Node == null) return; // Check for null
-
-        // Prevent recursive calls
-        folderTreeView.AfterCheck -= FolderTreeView_AfterCheck;
-
-        CheckAllSubNodes(e.Node, e.Node.Checked);
-
-        // Re-enable the event handler
-        folderTreeView.AfterCheck += FolderTreeView_AfterCheck;
+        SetNodeCheckState(folderTreeView.Items.Cast<TreeViewItem>(), true);
     }
 
-    private void CheckAllSubNodes(TreeNode treeNode, bool nodeChecked)
+    private void UncheckAllButton_Click(object sender, RoutedEventArgs e)
     {
-        if (treeNode == null) return; // Check for null
-
-        foreach (TreeNode node in treeNode.Nodes)
-        {
-            node.Checked = nodeChecked;
-            CheckAllSubNodes(node, nodeChecked);
-        }
+        SetNodeCheckState(folderTreeView.Items.Cast<TreeViewItem>(), false);
     }
 
-    private void CheckAllButton_Click(object? sender, EventArgs e)
-    {
-        SetNodeCheckState(folderTreeView.Nodes, true);
-    }
-
-    private void UncheckAllButton_Click(object? sender, EventArgs e)
-    {
-        SetNodeCheckState(folderTreeView.Nodes, false);
-    }
-
-    private void StartButton_Click(object? sender, EventArgs e)
+    private async void StartButton_Click(object sender, RoutedEventArgs e)
     {
         SaveFolderSelections();
-        StartOperationAsync();
+        await StartOperationAsync();
     }
 
-    private async void StartOperationAsync()
+    private async Task StartOperationAsync()
     {
         var saveFileDialog = new SaveFileDialog
         {
-            Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*",
-            DefaultExt = "txt",
-            InitialDirectory = SelectionManager.LoadSelections().Folders
-                .FirstOrDefault(f => f.SourceFolder == rootFolder)?.OutputFile // Use the saved output file path
+            Filters = new List<FileDialogFilter>
+            {
+                new FileDialogFilter { Name = "Text files", Extensions = new List<string> { "txt" } },
+                new FileDialogFilter { Name = "All files", Extensions = new List<string> { "*" } }
+            },
+            DefaultExtension = "txt"
         };
 
-        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+        var result = await saveFileDialog.ShowAsync(this);
+        if (!string.IsNullOrEmpty(result))
         {
-            folderSelection.OutputFile = saveFileDialog.FileName; // Update the output file path
+            folderSelection.OutputFile = result;
             SelectionManager.UpdateFolderSelection(folderSelection);
 
             var includedFiles = GetIncludedFiles();
-            using (var progressForm = new ProgressForm())
+            var progressForm = new ProgressForm
             {
-                progressForm.Show();
-                int totalFiles = includedFiles.Count();
-                int processedFiles = 0;
+                Width = 300,
+                Height = 100
+            };
+            progressForm.Show();
 
-                await Task.Run(() =>
+            int totalFiles = includedFiles.Count();
+            int processedFiles = 0;
+
+            await Task.Run(() =>
+            {
+                foreach (var file in includedFiles)
                 {
-                    foreach (var file in includedFiles)
-                    {
-                        // Process the file (pseudo-code)
-                        // ...
+                    processedFiles++;
+                    int progress = (int)((double)processedFiles / totalFiles * 100);
+                    progressForm.SetProgress(progress);
+                }
+                FileAggregator.AggregateFiles(rootFolder, includedFiles, result);
+            });
 
-                        processedFiles++;
-                        int progress = (int)((double)processedFiles / totalFiles * 100);
-                        progressForm.Invoke(new Action(() => progressForm.SetProgress(progress)));
-                    }
-                    FileAggregator.AggregateFiles(rootFolder, includedFiles, saveFileDialog.FileName);
-                });
-                progressForm.Close();
-            }
-            MessageBox.Show("Operation completed!");
+            progressForm.Close();
+            var dialog = new Window();
+            dialog.Content = new TextBlock { Text = "Operation completed!" };
+            dialog.Width = 200;
+            dialog.Height = 100;
+            await dialog.ShowDialog(this);
             this.Close();
 
-            // Ask the user if they want to open the file
-            var result = MessageBox.Show("Do you want to open the newly created file?", "Open File", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            var openFileDialog = new Window();
+            openFileDialog.Content = new TextBlock { Text = "Do you want to open the newly created file?" };
+            openFileDialog.Width = 200;
+            openFileDialog.Height = 100;
+            var resultOpenFile = await openFileDialog.ShowDialog<bool>(this);
+            if (resultOpenFile)
             {
                 try
                 {
-                    var processInfo = new System.Diagnostics.ProcessStartInfo(saveFileDialog.FileName)
+                    var processInfo = new System.Diagnostics.ProcessStartInfo(result)
                     {
                         UseShellExecute = true
                     };
@@ -180,82 +159,62 @@ public class FolderTreeView : Form
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error opening file: {ex.Message}");
+                    var errorDialog = new Window();
+                    errorDialog.Content = new TextBlock { Text = $"Error opening file: {ex.Message}" };
+                    errorDialog.Width = 200;
+                    errorDialog.Height = 100;
+                    await errorDialog.ShowDialog(this);
                 }
             }
         }
     }
 
-    public IEnumerable<string> GetIncludedFiles()
+    private IEnumerable<string> GetIncludedFiles()
     {
         var includedFiles = new List<string>();
-        GetIncludedFilesRecursive(folderTreeView.Nodes, includedFiles);
+        GetIncludedFilesRecursive(folderTreeView.Items.Cast<TreeViewItem>(), includedFiles);
         return includedFiles;
     }
 
-    private void GetIncludedFilesRecursive(TreeNodeCollection nodes, List<string> includedFiles)
+    private void GetIncludedFilesRecursive(IEnumerable<TreeViewItem> nodes, List<string> includedFiles)
     {
-        foreach (TreeNode node in nodes)
+        foreach (var node in nodes)
         {
-            if (node.Checked && File.Exists((string)node.Tag))
+            if (node.IsChecked == true && File.Exists((string)node.Tag))
             {
                 includedFiles.Add((string)node.Tag);
             }
-            GetIncludedFilesRecursive(node.Nodes, includedFiles);
-        }
-    }
-
-    private void CheckForNewFolders()
-    {
-        CheckForNewFoldersRecursive(folderTreeView.Nodes);
-    }
-
-    private void CheckForNewFoldersRecursive(TreeNodeCollection nodes)
-    {
-        foreach (TreeNode node in nodes)
-        {
-            var relativePath = Path.GetRelativePath(rootFolder, (string)node.Tag);
-            if (!folderSelection.SelectedFolders.Any(f => f.FolderPath == relativePath))
-            {
-                node.ForeColor = Color.Green; // Indicate new folders
-                node.Expand(); // Expand to show new folders
-            }
-            CheckForNewFoldersRecursive(node.Nodes);
+            GetIncludedFilesRecursive(node.Items.Cast<TreeViewItem>(), includedFiles);
         }
     }
 
     private void SaveFolderSelections()
     {
         folderSelection.SelectedFolders.Clear();
-        SaveFolderSelectionsRecursive(folderTreeView.Nodes);
+        SaveFolderSelectionsRecursive(folderTreeView.Items.Cast<TreeViewItem>());
         SelectionManager.UpdateFolderSelection(folderSelection);
     }
 
-    private void SaveFolderSelectionsRecursive(TreeNodeCollection nodes)
+    private void SaveFolderSelectionsRecursive(IEnumerable<TreeViewItem> nodes)
     {
-        foreach (TreeNode node in nodes)
+        foreach (var node in nodes)
         {
             var relativePath = Path.GetRelativePath(rootFolder, (string)node.Tag);
             folderSelection.SelectedFolders.Add(new FolderStatus
             {
                 FolderPath = relativePath,
-                Included = node.Checked
+                Included = node.IsChecked == true
             });
-            SaveFolderSelectionsRecursive(node.Nodes);
+            SaveFolderSelectionsRecursive(node.Items.Cast<TreeViewItem>());
         }
     }
 
-    private void SetNodeCheckState(TreeNodeCollection nodes, bool checkState)
+    private void SetNodeCheckState(IEnumerable<TreeViewItem> nodes, bool checkState)
     {
-        foreach (TreeNode node in nodes)
+        foreach (var node in nodes)
         {
-            node.Checked = checkState;
-            SetNodeCheckState(node.Nodes, checkState);
+            node.IsChecked = checkState;
+            SetNodeCheckState(node.Items.Cast<TreeViewItem>(), checkState);
         }
-    }
-
-    private void FolderTreeView_SizeChanged(object? sender, EventArgs e)
-    {
-        folderTreeView.Height = this.ClientSize.Height - checkAllButton.Height - uncheckAllButton.Height - startButton.Height - 20;
     }
 }

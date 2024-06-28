@@ -1,17 +1,17 @@
-// Filename: Form1.cs
 using System;
-using System.Drawing;
-using System.Windows.Forms;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+using Avalonia.Layout;
 
-public partial class Form1 : Form
+public partial class MainWindow : Window
 {
-    private Button selectFolderButton=null!;
-    private Button exitButton=null!;
-    private RichTextBox instructionsTextBox = null!;
+    private Button selectFolderButton = null!;
+    private Button exitButton = null!;
+    private TextBlock instructionsTextBox = null!;
     private string? selectedFolderPath;
     private static string? lastSaveLocation = null;
 
-    public Form1()
+    public MainWindow()
     {
         InitializeComponent();
         InitializeUI();
@@ -19,78 +19,59 @@ public partial class Form1 : Form
 
     private void InitializeUI()
     {
-        this.Text = "Code Aggregator";
-        this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        this.MaximizeBox = false;
+        this.Title = "Code Aggregator";
 
-        var menuStrip = new MenuStrip();
-        var settingsMenu = new ToolStripMenuItem("Settings");
-        var resetFileAssociationMenuItem = new ToolStripMenuItem("Reset Default File Association");
-        resetFileAssociationMenuItem.Click += ResetFileAssociationMenuItem_Click;
-        settingsMenu.DropDownItems.Add(resetFileAssociationMenuItem);
-        menuStrip.Items.Add(settingsMenu);
-        Controls.Add(menuStrip);
-
-        instructionsTextBox = new RichTextBox
+        instructionsTextBox = new TextBlock
         {
-            ReadOnly = true,
-            BorderStyle = BorderStyle.None,
-            BackColor = this.BackColor,
-            Margin = new Padding(25), // Add margins
-            Dock = DockStyle.Fill
-        };
+            Text = @"Code Aggregator
 
-        instructionsTextBox.Rtf = @"{\rtf1\ansi\deff0{\fonttbl{\f0\fswiss Helvetica;}}
-{\b\ul Code Aggregator}\par\par
-This application allows you to select a root folder and aggregate all text files within the selected folder and its subfolders into a single text file. This is particularly useful for consolidating code files or other text-based files.\par\par
-{\b How to Use:}\par
-1. Click the 'Select Folder' button below to choose the root folder for aggregation.\par
-2. Use the checkboxes to include or exclude specific files and folders. By default, all folders and files are included.\par
-3. Click 'Start Operation' to begin the aggregation process. You will be prompted to specify the location and name of the output file.\par\par
-Note: It is recommended to exclude folders like .git, .vs, or other dependency folders to avoid including unnecessary files.\par}";
+This application allows you to select a root folder and aggregate all text files within the selected folder and its subfolders into a single text file. This is particularly useful for consolidating code files or other text-based files.
+
+How to Use:
+1. Click the 'Select Folder' button below to choose the root folder for aggregation.
+2. Use the checkboxes to include or exclude specific files and folders. By default, all folders and files are included.
+3. Click 'Start Operation' to begin the aggregation process. You will be prompted to specify the location and name of the output file.
+
+Note: It is recommended to exclude folders like .git, .vs, or other dependency folders to avoid including unnecessary files.",
+            Margin = new Thickness(25),
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Top
+        };
 
         selectFolderButton = new Button
         {
-            Text = "Select Folder",
-            AutoSize = true,
-            Dock = DockStyle.Right,
-            Margin = new Padding(20) // Add margins
+            Content = "Select Folder",
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Top,
+            Margin = new Thickness(20)
         };
         selectFolderButton.Click += SelectFolderButton_Click;
 
         exitButton = new Button
         {
-            Text = "Exit",
-            AutoSize = true,
-            Dock = DockStyle.Left,
-            Margin = new Padding(20) // Add margins
+            Content = "Exit",
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Top,
+            Margin = new Thickness(20)
         };
         exitButton.Click += ExitButton_Click;
 
-        var buttonPanel = new Panel
+        var stackPanel = new StackPanel
         {
-            Dock = DockStyle.Bottom,
-            Height = 40
+            Orientation = Orientation.Vertical,
+            VerticalAlignment = VerticalAlignment.Stretch
         };
-        buttonPanel.Controls.Add(selectFolderButton);
-        buttonPanel.Controls.Add(exitButton);
+        stackPanel.Children.Add(instructionsTextBox);
+        stackPanel.Children.Add(selectFolderButton);
+        stackPanel.Children.Add(exitButton);
 
-        var mainPanel = new Panel
-        {
-            Dock = DockStyle.Fill,
-            Padding = new Padding(10, 40, 10, 10) // Add padding around the panel and move it down
-        };
-
-        mainPanel.Controls.Add(instructionsTextBox);
-
-        Controls.Add(mainPanel);
-        Controls.Add(buttonPanel);
-        MainMenuStrip = menuStrip;
+        this.Content = stackPanel;
     }
 
-    private void SelectFolderButton_Click(object? sender, EventArgs e)
+    private async void SelectFolderButton_Click(object? sender, RoutedEventArgs e)
     {
-        var folderPath = FolderSelector.SelectFolder();
+        var folderDialog = new OpenFolderDialog();
+        var folderPath = await folderDialog.ShowAsync(this);
         if (!string.IsNullOrEmpty(folderPath))
         {
             selectedFolderPath = folderPath;
@@ -99,29 +80,38 @@ Note: It is recommended to exclude folders like .git, .vs, or other dependency f
 
             var folderTreeView = new FolderTreeView(folderPath)
             {
-                Dock = DockStyle.Fill
+                Width = this.Width,
+                Height = this.Height,
             };
-            folderTreeView.FormClosing += (s, args) =>
+            folderTreeView.Closed += (s, args) =>
             {
                 settingsManager.SaveSettings(folderTreeView.GetIncludedFiles());
             };
 
-            folderTreeView.ShowDialog();
+            folderTreeView.ShowDialog(this);
         }
         else
         {
-            MessageBox.Show("No folder selected.");
+            var dialog = new Window();
+            dialog.Content = new TextBlock { Text = "No folder selected." };
+            dialog.Width = 200;
+            dialog.Height = 100;
+            await dialog.ShowDialog(this);
         }
     }
 
-    private void ExitButton_Click(object? sender, EventArgs e)
+    private void ExitButton_Click(object? sender, RoutedEventArgs e)
     {
-        Application.Exit();
+        this.Close();
     }
 
-    private void ResetFileAssociationMenuItem_Click(object? sender, EventArgs e)
+    private void ResetFileAssociationMenuItem_Click(object? sender, RoutedEventArgs e)
     {
         lastSaveLocation = null;
-        MessageBox.Show("Default file association has been reset.");
+        var dialog = new Window();
+        dialog.Content = new TextBlock { Text = "Default file association has been reset." };
+        dialog.Width = 200;
+        dialog.Height = 100;
+        dialog.ShowDialog(this);
     }
 }
