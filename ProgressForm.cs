@@ -2,7 +2,7 @@
 
 public partial class ProgressForm : Window
 {
-    private ProgressBar progressBar;
+    private ProgressBar progressBar =null!;
 
     public ProgressForm()
     {

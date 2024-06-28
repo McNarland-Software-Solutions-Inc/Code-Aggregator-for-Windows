@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("code-aggregator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.2+fb30df9b0754eae1ccf3d845957e2c30d1fc027e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.2+8d9e85adb00022a4074ccf0aedfdbed1eee25908")]
 [assembly: System.Reflection.AssemblyProductAttribute("code-aggregator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("code-aggregator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.2.0")]

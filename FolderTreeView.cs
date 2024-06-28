@@ -44,15 +44,15 @@ public class FolderTreeView : Window
     private void LoadFolders(string path)
     {
         var rootNode = new TreeViewItem { Header = path, Tag = path };
-        folderTreeView.Items = new List<TreeViewItem> { rootNode };
+        folderTreeView.Items = new List<TreeViewItem> { rootNode }.Cast<object>();
         LoadSubFolders(rootNode);
         rootNode.IsExpanded = true;
     }
 
     private void LoadSubFolders(TreeViewItem node)
     {
-        var path = (string)node.Tag;
-        foreach (var directory in Directory.GetDirectories(path))
+        var path = (string)node.Tag ?? string.Empty;
+        foreach (var directory in Directory.GetDirectories(path ?? string.Empty))
         {
             var relativePath = Path.GetRelativePath(rootFolder, directory);
             var subNode = new TreeViewItem
@@ -78,17 +78,17 @@ public class FolderTreeView : Window
         }
     }
 
-    private void CheckAllButton_Click(object sender, RoutedEventArgs e)
+    private void CheckAllButton_Click(object? sender, RoutedEventArgs e)
     {
         SetNodeCheckState(folderTreeView.Items.Cast<TreeViewItem>(), true);
     }
 
-    private void UncheckAllButton_Click(object sender, RoutedEventArgs e)
+    private void UncheckAllButton_Click(object? sender, RoutedEventArgs e)
     {
         SetNodeCheckState(folderTreeView.Items.Cast<TreeViewItem>(), false);
     }
 
-    private async void StartButton_Click(object sender, RoutedEventArgs e)
+    private async void StartButton_Click(object? sender, RoutedEventArgs e)
     {
         SaveFolderSelections();
         await StartOperationAsync();
@@ -96,12 +96,12 @@ public class FolderTreeView : Window
 
     private async Task StartOperationAsync()
     {
-        var saveFileDialog = new SaveFileDialog
+        var saveFileDialog = new OpenFolderDialog();
         {
             Filters = new List<FileDialogFilter>
             {
-                new FileDialogFilter { Name = "Text files", Extensions = new List<string> { "txt" } },
-                new FileDialogFilter { Name = "All files", Extensions = new List<string> { "*" } }
+                saveFileDialog.Filters.Add(new FileDialogFilter { Name = "Text files", Extensions = { "txt" } });
+                saveFileDialog.Filters.Add(new FileDialogFilter { Name = "All files", Extensions = { "*" } });
             },
             DefaultExtension = "txt"
         };
@@ -199,7 +199,7 @@ public class FolderTreeView : Window
     {
         foreach (var node in nodes)
         {
-            var relativePath = Path.GetRelativePath(rootFolder, (string)node.Tag);
+            var relativePath = Path.GetRelativePath(rootFolder, (string?)node.Tag ?? string.Empty);
             folderSelection.SelectedFolders.Add(new FolderStatus
             {
                 FolderPath = relativePath,

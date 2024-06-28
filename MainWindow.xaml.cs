@@ -22,7 +22,7 @@ namespace Code_Aggregator
             var outputTextBox = this.FindControl<TextBox>("OutputTextBox");
         }
 
-        private async void SelectFolderButton_Click(object sender, RoutedEventArgs e)
+        private async void SelectFolderButton_Click(object? sender, RoutedEventArgs e)
         {
             var folderDialog = new OpenFolderDialog();
             var folderPath = await folderDialog.ShowAsync(this);
@@ -41,7 +41,7 @@ namespace Code_Aggregator
                     settingsManager.SaveSettings(folderTreeView.GetIncludedFiles());
                 };
 
-                folderTreeView.ShowDialog(this);
+                await folderTreeView.ShowDialog(this);
             }
             else
             {
