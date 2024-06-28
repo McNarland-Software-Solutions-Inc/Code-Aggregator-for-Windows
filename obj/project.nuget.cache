@@ -1,10 +1,35 @@
 {
   "version": 2,
-  "dgSpecHash": "DHO5oKDGGySMECEodHWeocB+TT+dXg047cN+Tt7EfZ/c4Y54ujDDHrRzrhCjXZSr62eYAn1EGhoZgVgyWuFiug==",
+  "dgSpecHash": "/GAMkbS5eYk=",
   "success": true,
-  "projectFilePath": "K:\\OneDrive\\Documents\\06-Coding\\Repositories\\Code Aggregator\\Code Aggregator.csproj",
+  "projectFilePath": "/home/robert-mcnarland/repositories/code-aggregator/code-aggregator.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rober\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "/home/robert-mcnarland/.nuget/packages/avalonia/11.0.11/avalonia.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.angle.windows.natives/2.1.0.2023020321/avalonia.angle.windows.natives.2.1.0.2023020321.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.buildservices/0.0.29/avalonia.buildservices.0.0.29.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.desktop/11.0.11/avalonia.desktop.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.freedesktop/11.0.11/avalonia.freedesktop.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.native/11.0.11/avalonia.native.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.remote.protocol/11.0.11/avalonia.remote.protocol.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.skia/11.0.11/avalonia.skia.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.win32/11.0.11/avalonia.win32.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/avalonia.x11/11.0.11/avalonia.x11.11.0.11.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/harfbuzzsharp/7.3.0/harfbuzzsharp.7.3.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/harfbuzzsharp.nativeassets.linux/7.3.0/harfbuzzsharp.nativeassets.linux.7.3.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/harfbuzzsharp.nativeassets.macos/7.3.0/harfbuzzsharp.nativeassets.macos.7.3.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/harfbuzzsharp.nativeassets.webassembly/7.3.0/harfbuzzsharp.nativeassets.webassembly.7.3.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/harfbuzzsharp.nativeassets.win32/7.3.0/harfbuzzsharp.nativeassets.win32.7.3.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/skiasharp/2.88.7/skiasharp.2.88.7.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/skiasharp.nativeassets.linux/2.88.7/skiasharp.nativeassets.linux.2.88.7.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/skiasharp.nativeassets.macos/2.88.7/skiasharp.nativeassets.macos.2.88.7.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/skiasharp.nativeassets.webassembly/2.88.7/skiasharp.nativeassets.webassembly.2.88.7.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/skiasharp.nativeassets.win32/2.88.7/skiasharp.nativeassets.win32.2.88.7.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/system.io.pipelines/6.0.0/system.io.pipelines.6.0.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/home/robert-mcnarland/.nuget/packages/tmds.dbus.protocol/0.15.0/tmds.dbus.protocol.0.15.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,10 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Code_Aggregator.MainWindow"
+        Title="Code Aggregator"
+        Width="800" Height="600">
+    <StackPanel>
+        <TextBlock Text="Welcome to Code Aggregator" Margin="10"/>
+        <!-- Add more UI components here -->
+    </StackPanel>
+</Window>

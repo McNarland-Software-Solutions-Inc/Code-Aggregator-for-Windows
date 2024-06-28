@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/robert-mcnarland/repositories/code-aggregator/code-aggregator.csproj": {}
+  },
+  "projects": {
+    "/home/robert-mcnarland/repositories/code-aggregator/code-aggregator.csproj": {
+      "version": "1.1.2",
+      "restore": {
+        "projectUniqueName": "/home/robert-mcnarland/repositories/code-aggregator/code-aggregator.csproj",
+        "projectName": "code-aggregator",
+        "projectPath": "/home/robert-mcnarland/repositories/code-aggregator/code-aggregator.csproj",
+        "packagesPath": "/home/robert-mcnarland/.nuget/packages/",
+        "outputPath": "/home/robert-mcnarland/repositories/code-aggregator/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/robert-mcnarland/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Avalonia.Desktop": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
