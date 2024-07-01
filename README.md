@@ -4,11 +4,12 @@
 Code Aggregator is a powerful application designed to streamline the process of consolidating multiple text files from a selected root folder and its subfolders into a single comprehensive text file. This tool is especially beneficial for developers and researchers who need to upload and manage large sets of code files or other text-based documents in a unified manner.
 
 ### Key Uses:
-Consolidating Code Files: Simplify the process of combining all your project files into one file for easier sharing, review, or uploading to AI models like GPT.
-Preparing Data for AI Models: Aggregate scripts, configuration files, and documentation into a single text file, making it easier to upload and manage within AI platforms that support file uploads.
-Project Archiving: Create a single-file backup of all your project’s text files, ensuring you have a comprehensive archive of your work.
-Documentation: Merge multiple documentation files into one, providing a unified reference document for your project or team.
-Text-Based Data Management: Easily manage large collections of text files by consolidating them into a single, searchable file.
+- Consolidating Code Files: Simplify the process of combining all your project files into one file for easier sharing, review, or uploading to AI models like GPT.
+- Preparing Data for AI Models: Aggregate scripts, configuration files, and documentation into a single text file, making it easier to upload and manage within AI platforms that support file uploads.
+- Project Archiving: Create a single-file backup of all your project’s text files, ensuring you have a comprehensive archive of your work.
+- Documentation: Merge multiple documentation files into one, providing a unified reference document for your project or team.
+- Text-Based Data Management: Easily manage large collections of text files by consolidating them into a single, searchable file.
+
 By using Code Aggregator, you can enhance your workflow efficiency, improve data management, and simplify the process of preparing code and documentation for various use cases.
 
 ## Features
